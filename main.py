@@ -6,6 +6,8 @@ from datetime import datetime
 import requests
 from PIL import Image
 
+from test2 import like
+
 
 # === 读取 TOKEN ===
 def load_token():
@@ -171,12 +173,19 @@ def download_artifacts():
 
     log(f"\n🎉 全部完成，共下载并转换 {total_downloaded} 个文件。")
 
+
+def main():
+    # log("=" * 60)
+    # auto_sign()
+    # log("=" * 60)
+    # test.main()
+    # log("=" * 60)
+    like()
+    log("=" * 60)
+    # download_artifacts()
+    log("=" * 60)
+
+
 # === 主程序 ===
 if __name__ == "__main__":
-    log("=" * 60)
-    auto_sign()
-    log("=" * 60)
-    complete_assignment(TOKEN, UUID)
-    log("=" * 60)
-    download_artifacts()
-    log("=" * 60)
+    main()
